@@ -38,3 +38,8 @@ Cannot create container for service db: status code not OK but 500: {"Message":"
 **(For Docker Desktop (windows)) The solution is to share the project path folder drive in Docker for starter. If that doesn't work, restart docker.**
 
 ![image](https://user-images.githubusercontent.com/69118015/127782715-f599be1b-dffc-411c-9893-5111429190ce.png)
+
+
+## Deployment different apps through Docker to cloud services like: AWS, Google Cloud, Azure
+
+Found an amazing video by FreeCodeCamp about this topic: https://www.youtube.com/watch?v=-ANCcFQBk6I&ab_channel=freeCodeCamp.org
