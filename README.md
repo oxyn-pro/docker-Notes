@@ -42,4 +42,4 @@ Cannot create container for service db: status code not OK but 500: {"Message":"
 
 ## Deployment different apps through Docker to cloud services like: AWS, Google Cloud, Azure
 
-Found an amazing video by FreeCodeCamp about this topic: https://www.youtube.com/watch?v=-ANCcFQBk6I&ab_channel=freeCodeCamp.org
+Found an amazing video from "FreeCodeCamp" about this topic: https://www.youtube.com/watch?v=-ANCcFQBk6I&ab_channel=freeCodeCamp.org
