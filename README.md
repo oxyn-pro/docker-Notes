@@ -28,6 +28,16 @@ Removes an image. Will fail if there is a running instance of that image i.e. co
 
 > docker rmi -f <image_id>    
 
+#### Most used ones:
+Forces the removal of a running container (uses SIGKILL)
+> docker rm -f <container_id>
+
+Delete all containers that are not running.
+>docker container rm $(docker ps -a -q)
+
+Kill all running containers.
+docker container kill $(docker ps -q)
+
 Forces removal of image even if it is referenced in multiple repositories, i.e. same image id given multiple names/tags. Will still fail if there is a docker container referencing image
 
 ## Problems with "File Sharing"
