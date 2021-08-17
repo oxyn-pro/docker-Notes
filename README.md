@@ -13,11 +13,16 @@ docker exec -t <container_id> bash
 ```
 Execute an interactive bash shell on the container:
 
-- ### Check container's id, stop container, remove a container:
+- ### Check container's id, stop container, start container, remove a container:
 ```
 docker ps -aqf "name=containername"
 ```
 Shows container's id
+
+```
+docker start <container_id>"
+```
+Starts stopped container
 
 ```
 docker ps -a 
