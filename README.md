@@ -79,6 +79,10 @@ docker system prune
 Forces removal of image even if it is referenced in multiple repositories, i.e. same image id given multiple names/tags.
 Will still fail if there is a docker container referencing image
 
+## How do ports work?
+
+![How does ports work in Docker](https://user-images.githubusercontent.com/69118015/129787006-3344b20a-12f4-44f1-93d1-711140e5f847.png)
+
 ## Problems with "File Sharing"
 ```
 Cannot create container for service db: status code not OK but 500: {"Message":"Unhandled exception: Filesharing has been cancelled","StackTrace":" at Docker.ApiServices.Mounting.FileSharing.d__6.MoveNext()
