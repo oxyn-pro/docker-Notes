@@ -2,25 +2,27 @@
 ## The small instruction created by my own notes about docker.  Commands, Templates
 
 ## Commands to work with docker images, containers
+- ### Create container, create directories/files inside a container:
 ```
-docker ps -a 
+docker run --name ubuntu_bash --rm -i -t ubuntu bash
 ```
-Lists containers (and tells you which images they are spun from)
+This will create a container named ubuntu_bash and start a Bash session.
 
+```
+docker exec -t <container_id> bash
+```
+Execute an interactive bash shell on the container:
+
+- ### Check container's id, stop container, remove a container:
 ```
 docker ps -aqf "name=containername"
 ```
 Shows container's id
 
 ```
-docker images    
-```           
-Lists images 
-
+docker ps -a 
 ```
-docker rm <container_id>  
-```  
-Removes a stopped container
+Lists containers (and tells you which images they are spun from)
 
 ```
 docker stop <container_id> 
@@ -28,26 +30,33 @@ docker stop <container_id>
 Stops a container
 
 ```
+docker rm <container_id>  
+```  
+Removes a stopped container
+
+```
 docker rm -f <container_id> 
 ```
 Forces the removal of a running container (uses SIGKILL)
+
+```
+docker rm -f <container_id>
+```
+Delete all containers that are not running.
+
+- ### List images, Remove images
+
+```
+docker images    
+```           
+Lists images 
 
 ```
 docker rmi <image_id>       
 ```
 Removes an image. Will fail if there is a running instance of that image i.e. container
 
-```
-docker rmi -f <image_id>    
-```
-Forces the removal of a running container (uses SIGKILL)
-
-### Most used ones:
-```
-docker rm -f <container_id>
-```
-Delete all containers that are not running.
-
+- ### Deleting running containers, deleting stopped containers
 ```
 docker container rm $(docker ps -a -q)
 ```
@@ -58,10 +67,12 @@ docker container kill $(docker ps -q)
 ```
 Kill all stopped containers, all networks not used by at least one container, all dangling images. all build cache
 
+- ### FORSE DELETE IMAGES
 ```
 docker system prune
 ```
-Forces removal of image even if it is referenced in multiple repositories, i.e. same image id given multiple names/tags. Will still fail if there is a docker container referencing image
+Forces removal of image even if it is referenced in multiple repositories, i.e. same image id given multiple names/tags.
+Will still fail if there is a docker container referencing image
 
 ## Problems with "File Sharing"
 ```
