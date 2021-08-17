@@ -89,6 +89,13 @@ docker run -p 8080:80 -p 5000:80 -d <image_name>
 ```
 It will create a container and maps differenct localhost ports to the main container's port
 
+## Formating
+
+#### Format in Table mod
+```
+docker ps --format "table ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+```
+
 ## Problems with "File Sharing"
 ```
 Cannot create container for service db: status code not OK but 500: {"Message":"Unhandled exception: Filesharing has been cancelled","StackTrace":" at Docker.ApiServices.Mounting.FileSharing.d__6.MoveNext()
