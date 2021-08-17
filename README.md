@@ -83,6 +83,12 @@ Will still fail if there is a docker container referencing image
 
 ![How does ports work in Docker](https://user-images.githubusercontent.com/69118015/129787006-3344b20a-12f4-44f1-93d1-711140e5f847.png)
 
+### Mapping different ports to the container's port
+```
+docker run -p 8080:80 -p 5000:80 -d <image_name>
+```
+It will create a container and maps differenct localhost ports to the main container's port
+
 ## Problems with "File Sharing"
 ```
 Cannot create container for service db: status code not OK but 500: {"Message":"Unhandled exception: Filesharing has been cancelled","StackTrace":" at Docker.ApiServices.Mounting.FileSharing.d__6.MoveNext()
