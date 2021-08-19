@@ -106,6 +106,11 @@ It will create a container and maps differenct localhost ports to the main conta
 docker ps --format "table ID\t{{.ID}}\nNAME\t{{.Names}}\nIMAGE\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
 ```
 
+## Docker Architecture
+
+![Docker Architecture](https://user-images.githubusercontent.com/69118015/130094751-499f7cfb-e60e-4832-8efa-f2201156ab6d.png)
+
+
 ## Problems with "File Sharing"
 ```
 Cannot create container for service db: status code not OK but 500: {"Message":"Unhandled exception: Filesharing has been cancelled","StackTrace":" at Docker.ApiServices.Mounting.FileSharing.d__6.MoveNext()
