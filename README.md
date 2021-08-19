@@ -61,6 +61,11 @@ docker rmi <image_id>
 ```
 Removes an image. Will fail if there is a running instance of that image i.e. container
 
+```
+docker image rm <image_name>   
+```           
+Removes an image
+
 - ### Deleting running containers, deleting stopped containers
 ```
 docker container rm $(docker ps -a -q)
