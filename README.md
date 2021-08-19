@@ -66,6 +66,11 @@ docker image rm <image_name>
 ```           
 Removes an image
 
+```
+docker image rm -d <image_name>   
+```           
+Forcibly delete an image
+
 - ### Deleting running containers, deleting stopped containers
 ```
 docker container rm $(docker ps -a -q)
